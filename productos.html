@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico</title>
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./static\css\estilos_index.css">
+    <link rel="stylesheet" href="./static/css/css_formulario.css">
+    <link rel="stylesheet" href="./static/css/css_class-Tomi.css">
+
+     
+</head>
+<body class="body">
+    <header>
+        <header class="header">
+            <h3><i>La Librería</i></h3>
+            <nav class="navbar">
+                <div class="nav-item">
+                    <a href="./index.html">Inicio</a>
+                </div>
+                <div class="nav-item">
+                    <a href="./productos.html">Productos</a>
+                </div>
+                <div class="nav-item">
+                    <a href="./quienes_somos.html">Quiénes somos</a>
+                </div>
+                <div class="nav-item">
+                    <a href="./contacto.html">Contactanos</a>
+                </div>
+            </nav>
+        </header>
+    </header>
+    <h1 class="h1">Qué tenemos para ofrecerte??</h1>
+    <main class="main">
+       <div class="product">
+          <a href="" title="Ir a ver este Producto">
+            <img class="img" src="./img/boligrafos-bic-fashion-x10.jpg" alt="Bolígrafo BIC">
+          </a>
+       </div> 
+
+       <div class="product">
+        <a href="" title="Ir a ver este Producto">
+          <img class="img" src="./img/D_NQ_NP_658308-MLA48985902903_012022-O.jpg" alt="Bolígrafo BIC">
+        </a>
+     </div> 
+
+     <div class="product">
+        <a href="" title="Ir a ver este Producto">
+          <img class="img" src="./img/resma-a4-boreal-75-g-papel-obra-blanco-500-hojas-D_NQ_NP_826761-MLA41865422058_052020-F.jpg" alt="Bolígrafo BIC">
+        </a>
+     </div> 
+
+        </a>
+    </main>
+    <footer class="footer"
+        >
+            <section class="section-footer"
+            >
+                <section>
+                    <a href="https://www.instagram.com/" 
+                    target="_blank" 
+                    class="a"
+                    title="Ir a la página de Instagram"
+                    >
+                        <img src="./img/instagram.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </section>
+
+                <section>
+                    <a href="https://www.facebook.com/" 
+                        target="_blank" 
+                        text-decoration: none;
+                        class="a"
+                        title="Ir a la página de Facebook"
+                    >
+                        <img src="./img/facebook.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </section>   
+
+
+                <section>
+                    <a href="https://www.youtube.com/" 
+                        target="_blank" 
+                        class="a"
+                        title="Ir a la página de YouTube"
+                    >
+                        <img src="./img/youtube.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </section>   
+
+                <section>
+                    
+                    <a href="https://www.twitter.com/" 
+                       target="_blank" 
+                       class="a"
+                       title="Ir a la página de Twitter"
+                    >
+                        <img src="./img/twitter-x.svg" 
+                            alt="Imagen de Instagram"
+                            class="img"
+                        >   
+                    </a>
+                </section>   
+            </section>
+
+            <section class="section-h5"
+                >
+                <h5 class="h5"
+                >
+                Derechos reservados @2024
+                </h5>
+            </section>
+        </footer>
+    <script>
+        // Ajustar margen superior del main para no ser cubierto por el header
+        function adjustMainMargin() {
+            var header = document.querySelector('.header');
+            var main = document.querySelector('main');
+            var headerHeight = header.offsetHeight;
+            main.style.marginTop = headerHeight + 'px';
+        }
+        // Ejecutar la función al cargar y al redimensionar
+        window.addEventListener('load', adjustMainMargin);
+        window.addEventListener('resize', adjustMainMargin);
+    </script>
+</body>
+</html>
