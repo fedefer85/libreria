@@ -152,6 +152,65 @@
             </div>
         </footer>
 
+        <script>
+            (function () {  
+                // Validaciones del formulario
+                var formulario = document.getElementsByName('formulario')[0],
+                    boton = document.getElementById('btn');
+    
+                var validarRadio = function (e) {
+                    if (formulario.trato[0].checked == true ||
+                        formulario.trato[1].checked == true) {
+                    } else {
+                        alert("Completa el campo Pronombre");
+                        e.preventDefault();
+                    }
+                };
+    
+                var validarNombre = function (e) {
+                    if (formulario.nombre.value == 0) {
+                        alert("Completa el campo Nombre");
+                        e.preventDefault();
+                    }
+                }
+    
+                var validarMail = function (e) {
+                    if (formulario.email.value == 0) {
+                        alert("Completa el campo Email");
+                        e.preventDefault();
+                    }
+                }
+    
+                var validarSelect = function (e) {
+                    if (formulario.genero.selectedIndex === 0) {
+                        alert("Seleccione género literario preferido");
+                        e.preventDefault();
+                    }
+                };
+    
+                var validarTitulo = function (e) {
+                    if (formulario.titulo.value == 0) {
+                        alert("Completa el campo Título a publicar");
+                        e.preventDefault();
+                    }
+                }
+    
+                var validar = function (e) {
+                    validarRadio(e);
+                    validarNombre(e);
+                    validarMail(e);
+                    validarSelect(e);
+                    validarTitulo(e);
+                };
+    
+                formulario.addEventListener("submit", validar);
+            }())
+        </script>
+    
+    </body>
+    
+    </html>
+
 </body>
 
 </html>
