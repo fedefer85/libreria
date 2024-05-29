@@ -1,63 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <title>Catalogo</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo Práctico</title>
-    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./static\css\estilos_index.css">
-    <link rel="stylesheet" href="./static/css/css_formulario.css">
-    <link rel="stylesheet" href="./static/css/css_class-Tomi.css">
-
-     
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/javascript.js"></script>
 </head>
+
 <body class="body">
-    <header>
-        <header class="header">
-            <h3><i>La Librería</i></h3>
-            <nav class="navbar">
-                <div class="nav-item">
-                    <a href="./index.html">Inicio</a>
-                </div>
-                <div class="nav-item">
-                    <a href="./productos.html">Productos</a>
-                </div>
-                <div class="nav-item">
-                    <a href="./quienes_somos.html">Quiénes somos</a>
-                </div>
-                <div class="nav-item">
-                    <a href="./contacto.html">Contactanos</a>
-                </div>
-            </nav>
-        </header>
+    <header class="header">
+        <h3><i>La Librería</i></h3>
+        <nav class="navbar">
+            <div class="nav-item">
+                <a href="./index.html">Inicio</a>
+            </div>
+            <div class="nav-item">
+                <a href="./productos.html">Productos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./quienes_somos.html">Quiénes somos</a>
+            </div>
+            <div class="nav-item">
+                <a href="./contacto.html">Contactanos</a>
+            </div>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
     </header>
-    <h1 class="h1">Qué tenemos para ofrecerte??</h1>
-    <main class="main">
-       <div class="product">
-          <a href="" title="Ir a ver este Producto">
-            <img class="img" src="./img/boligrafos-bic-fashion-x10.jpg" alt="Bolígrafo BIC">
-          </a>
-       </div> 
 
-       <div class="product">
-        <a href="" title="Ir a ver este Producto">
-          <img class="img" src="./img/D_NQ_NP_658308-MLA48985902903_012022-O.jpg" alt="Bolígrafo BIC">
-        </a>
-     </div> 
+    <main class="padding">
+        <h1 class="featured-title">Productos</h1>
+        <div class="store-container">
+            <div class="category-list">
+                <a href="#" class="category-item" data-category="all">Todos</a>
+                <a href="#" class="category-item" data-category="ciencia-ficcion">Ciencia Ficcion</a>
+                <a href="#" class="category-item" data-category="horror">Horror</a>
+                <a href="#" class="category-item" data-category="romance">Romance</a>
+                <a href="#" class="category-item" data-category="aventura">Aventura</a>
+                <a href="#" class="category-item" data-category="infantil">Infantiles</a>
 
-     <div class="product">
-        <a href="" title="Ir a ver este Producto">
-          <img class="img" src="./img/resma-a4-boreal-75-g-papel-obra-blanco-500-hojas-D_NQ_NP_826761-MLA41865422058_052020-F.jpg" alt="Bolígrafo BIC">
-        </a>
-     </div> 
+            </div>
+            
+            <div class="product-list">
+                <div class="product-item" data-category="horror">
+                    <div class="image-container">
+                        <img src="img/books/el_gato_negro.jpg" alt="El Gato Negro">
+                    </div>
+                    <a href="#">El Gato Negro</a>
+                </div>
 
-        </a>
+                <div class="product-item" data-category="aventura">
+                    <div class="image-container">
+                        <img src="img/books/Aventura_en_el_mar.png" alt="Aventura en el Mar">
+                    </div>
+                    <a href="">Aventura en el Mar</a>
+                </div>
+
+                <div class="product-item" data-category="romance">
+                    <div class="image-container">
+                        <img src="img/books/Biografia_peripe.png" alt="Biografia Peripe">
+                    </div>
+                    <a href="">Biografia Peripe</a>
+                </div>
+
+                <div class="product-item" data-category="ciencia-ficcion">
+                    <div class="image-container">
+                        <img src="img/books/cronicas-marcianas.jpg" alt="Cronicas Marcianas">
+                    </div>
+                    <a href="">Cronicas Marcianas</a>
+                </div>
+
+                <div class="product-item" data-category="aventura">
+                    <div class="image-container">
+                        <img src="img/books/Historia_antigua.png" alt="Historia antigua">
+                    </div>
+                    <a href="">Historia antigua</a>
+                </div>
+
+                <div class="product-item" data-category="infantil">
+                    <div class="image-container">
+                        <img src="img/books/blanca_nieves.png" alt="Blanca Nieves">
+                    </div>
+                    <a href="">Blanca Nieves</a>
+                </div>
+
+                <div class="product-item" data-category="infantil">
+                    <div class="image-container">
+                        <img src="img/books/caperucita_roja.jpg" alt="Caperusita Roja">
+                    </div>
+                    <a href="">Caperusita Roja</a>
+                </div>
+
+                <div class="product-item" data-category="infantil">
+                    <div class="image-container">
+                        <img src="img/books/los_tres_cerditos.jpg" alt="Los Tres Cerditos">
+                    </div>
+                    <a href="">Los Tres Cerditos</a>
+                </div>
+
+                <div class="product-item" data-category="horror">
+                    <div class="image-container">
+                        <img src="img/books/el_cuervo.jpg" alt="El cuervo">
+                    </div>
+                    <a href="">El Cuervo</a>
+                </div>
+
+                <div class="product-item" data-category="horror">
+                    <div class="image-container">
+                        <img src="img/books/escarabajo_dorado.jpg" alt="El Escarabajo de Oro">
+                    </div>
+                    <a href="">El Escarabajo de Oro</a>
+                </div>
+
+                <div class="product-item" data-category="aventura">
+                    <div class="image-container">
+                        <img src="img/books/HarryPotterMisterioPrincipe.jpg" alt="Harry Potter y el Misterio del Principe">
+                    </div>
+                    <a href="">Harry Potter y el Misterio del Principe</a>
+                </div>
+
+                <div class="product-item" data-category="aventura">
+                    <div class="image-container">
+                        <img src="img/books/narnia.jpg" alt="Narnia: El Leon, la bruja y el ropero">
+                    </div>
+                    <a href="">"Narnia: El Leon, la bruja y el ropero"</a>
+                </div>
+
+                <div class="product-item" data-category="ciencia-ficcion">
+                    <div class="image-container">
+                        <img src="img/books/dune.jpg" alt="Dune">
+                    </div>
+                    <a href="">Dune</a>
+                </div>
+
+                <div class="product-item" data-category="ciencia-ficcion">
+                    <div class="image-container">
+                        <img src="img/books/1984_1.jpg" alt="1984">
+                    </div>
+                    <a href="">1984</a>
+                </div>
+
+            </div>
+
+        </div>
     </main>
+
+    <noscript>
+        <div>
+            <p>Para disfrutar de una mejor experiencia, habilite JavaScript en su navegador.</p>
+        </div>
+    </noscript>
+
     <footer class="footer"
         >
-            <section class="section-footer"
+            <div class="section-footer"
             >
-                <section>
+                <div>
                     <a href="https://www.instagram.com/" 
                     target="_blank" 
                     class="a"
@@ -68,12 +170,11 @@
                             class="img"
                         >   
                     </a>
-                </section>
+                </div>
 
-                <section>
+                <div>
                     <a href="https://www.facebook.com/" 
                         target="_blank" 
-                        text-decoration: none;
                         class="a"
                         title="Ir a la página de Facebook"
                     >
@@ -82,10 +183,10 @@
                             class="img"
                         >   
                     </a>
-                </section>   
+                </div>   
 
 
-                <section>
+                <div>
                     <a href="https://www.youtube.com/" 
                         target="_blank" 
                         class="a"
@@ -96,11 +197,10 @@
                             class="img"
                         >   
                     </a>
-                </section>   
+                </div>   
 
-                <section>
-                    
-                    <a href="https://www.twitter.com/" 
+                <div>
+                     <a href="https://www.twitter.com/" 
                        target="_blank" 
                        class="a"
                        title="Ir a la página de Twitter"
@@ -110,28 +210,16 @@
                             class="img"
                         >   
                     </a>
-                </section>   
-            </section>
+                </div>   
+            </div>
 
-            <section class="section-h5"
+            <div class="section-h5"
                 >
                 <h5 class="h5"
                 >
                 Derechos reservados @2024
                 </h5>
-            </section>
+            </div>
         </footer>
-    <script>
-        // Ajustar margen superior del main para no ser cubierto por el header
-        function adjustMainMargin() {
-            var header = document.querySelector('.header');
-            var main = document.querySelector('main');
-            var headerHeight = header.offsetHeight;
-            main.style.marginTop = headerHeight + 'px';
-        }
-        // Ejecutar la función al cargar y al redimensionar
-        window.addEventListener('load', adjustMainMargin);
-        window.addEventListener('resize', adjustMainMargin);
-    </script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario recibido</title>
-    <link rel="stylesheet" href="./static/css/css_formulario.css">
-    <link rel="stylesheet" href="./static/css/css_class-Tomi.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/javascript.js"></script>
 </head>
 
 <body>
@@ -23,14 +25,36 @@
                 <a href="./quienes_somos.html">Quiénes somos</a>
             </div>
             <div class="nav-item">
-                <a href="./contacto.html">Contactanos</a>
+                <a href="./contacto.html    ">Contactanos</a>
             </div>
         </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
     </header>
 
-    <main>
+    <main class="padding">
+        <noscript>
+            <div>
+                <p>You need to turn on Javascript in your browser.</p>
+                <p>In Microsoft Internet Explorer 4 or greater:</p>
+                <ul>
+                    <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+                    <li>Click on the "Security" tab.</li>
+                    <li>Click on the "Custom Level" button. (In IE 4, select "Custom" and then click on "Settings...".)</li>
+                    <li>Under "Active scripting" make sure "Enable" is selected.</li>
+                </ul>
+                <p>In Netscape version 4 or greater:</p>
+                <ul>
+                    <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+                    <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+                    <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+                    <li>Click the <b>OK</b> button.</li>
+                </ul>
+            </div>
+        </noscript>
 
-        <p>Los datos enviados por el formulario son:</p>
+    <p>Los datos enviados por el formulario son:</p>
 
         <table class="centered-table">
             <tr>
@@ -39,9 +63,9 @@
             </tr>
 
 
-            <script language="javascript">
+            <script>
 
-                /* el método por defecto es GET que envía el formulario en el link con todos los campos separados por & */
+            /* el método por defecto es GET que envía el formulario en el link con todos los campos separados por & */
                 /*location.search trae la URL a partir del ? que está cuando pasan los datos del formulario */
                 var args = location.search.substr(1).split('&');  /* split: descompone la cadena de caracteres de la URL por el caracter & */
 
@@ -69,137 +93,82 @@
                 }
             </script>
 
-            <noscript>
-                <tr>
-                    <td>
-                        <p>You need to turn on Javascript in your browser.</p>
-
-                        <p>In Microsoft Internet Explorer 4 or greater:</p>
-                        <ul>
-                            <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
-                            <li>Click on the "Security" tab.</li>
-                            <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
-                                and then click on "Settings...".)</li>
-                            <li>Under "Active scripting" make sure "Enable" is selected.</li>
-                        </ul>
-
-                        <p>In Netscape version 4 or greater:</p>
-                        <ul>
-                            <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
-                            <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
-                            <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
-                            <li>Click the <b>OK</b> button.</li>
-                        </ul>
-
-                    </td>
-                </tr>
-            </noscript>
+           
 
         </table>
+
+
         
         <br>
-        <a href="./contacto.html" id="btn" name="btn" value="Volver" style="text-decoration: none;">Volver</a>
+        <a href="./contacto.html" id="btn"  style="text-decoration: none;">Volver</a>
 
     </main>
 
-    <style>
-        .centered-table {
-            width: 226px;
-            border-collapse: collapse;
-        }
-
-        .centered-table th,
-        .centered-table td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .centered-table th {
-            text-align: left;
-        }
-    </style>
-
-    <script>
-        // Ajustar margen superior del main para no ser cubierto por el header
-        function adjustMainMargin() {
-            var header = document.querySelector('.header');
-            var main = document.querySelector('main');
-            var headerHeight = header.offsetHeight;
-            main.style.marginTop = headerHeight + 'px';
-        }
-        // Ejecutar la función al cargar y al redimensionar
-        window.addEventListener('load', adjustMainMargin);
-        window.addEventListener('resize', adjustMainMargin);
-    </script>
-    <footer class="footer"
-        >
-            <section class="section-footer"
+<footer class="footer"
+>
+    <div class="section-footer"
+    >
+        <div>
+            <a href="https://www.instagram.com/" 
+            target="_blank" 
+            class="a"
+            title="Ir a la página de Instagram"
             >
-                <section>
-                    <a href="https://www.instagram.com/" 
-                    target="_blank" 
-                    class="a"
-                    title="Ir a la página de Instagram"
-                    >
-                        <img src="./img/instagram.svg" 
-                            alt="Imagen de Instagram"
-                            class="img"
-                        >   
-                    </a>
-                </section>
+                <img src="./img/instagram.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>
 
-                <section>
-                    <a href="https://www.facebook.com/" 
-                        target="_blank" 
-                        text-decoration: none;
-                        class="a"
-                        title="Ir a la página de Facebook"
-                    >
-                        <img src="./img/facebook.svg" 
-                            alt="Imagen de Instagram"
-                            class="img"
-                        >   
-                    </a>
-                </section>   
+        <div>
+            <a href="https://www.facebook.com/" 
+                target="_blank" 
+                class="a"
+                title="Ir a la página de Facebook"
+            >
+                <img src="./img/facebook.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>   
 
 
-                <section>
-                    <a href="https://www.youtube.com/" 
-                        target="_blank" 
-                        class="a"
-                        title="Ir a la página de YouTube"
-                    >
-                        <img src="./img/youtube.svg" 
-                            alt="Imagen de Instagram"
-                            class="img"
-                        >   
-                    </a>
-                </section>   
+        <div>
+            <a href="https://www.youtube.com/" 
+                target="_blank" 
+                class="a"
+                title="Ir a la página de YouTube"
+            >
+                <img src="./img/youtube.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>   
 
-                <section>
-                    <a href="https://www.twitter.com/" 
-                       target="_blank" 
-                       class="a"
-                       title="Ir a la página de Twitter"
-                    >
-                        <img src="./img/twitter-x.svg" 
-                            alt="Imagen de Instagram"
-                            class="img"
-                        >   
-                    </a>
-                </section>   
-            </section>
+        <div>
+             <a href="https://www.twitter.com/" 
+               target="_blank" 
+               class="a"
+               title="Ir a la página de Twitter"
+            >
+                <img src="./img/twitter-x.svg" 
+                    alt="Imagen de Instagram"
+                    class="img"
+                >   
+            </a>
+        </div>   
+    </div>
 
-            <section class="section-h5"
-                >
-                <h5 class="h5"
-                >
-                Derechos reservados @2024
-                </h5>
-            </section>
-        </footer>
-
-</body>
+    <div class="section-h5"
+        >
+        <h5 class="h5"
+        >
+        Derechos reservados @2024
+        </h5>
+    </div>
+</footer>
 
 </html>
