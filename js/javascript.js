@@ -53,8 +53,7 @@ $(document).ready(function() {
 
     var validarRadio = function (e) {
         if (formulario.trato[0].checked == true ||
-            formulario.trato[1].checked == true ||
-            formulario.trato[2].checked == true) {
+            formulario.trato[1].checked == true) {
         } else {
             alert("Completa el campo Pronombre");
             e.preventDefault();
